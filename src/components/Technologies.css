@@ -1,0 +1,42 @@
+.technologies {
+  width: 100%;
+  background-color: #eee;
+  margin-top: -70px;
+}
+
+.technologies .container {
+  width: 1240px;
+  margin: 0rem auto;
+  padding: 0.5rem 0rem;
+}
+
+.technologies h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.technologies ul {
+  display: flex;
+  justify-content: center;
+}
+
+.technologies li {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 940px) {
+  .technologies .container {
+    width: 100%;
+  }
+  .technologies .container h2 {
+    margin-top: 30px;
+  }
+
+  .technologies li {
+    padding: 0.5rem;
+  }
+
+  .technologies .container ul {
+    width: 100%;
+  }
+}
