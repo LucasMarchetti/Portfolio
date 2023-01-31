@@ -73,7 +73,7 @@ export default function Proyects() {
             <p>Proyecto propio</p>
             <p>
               <a
-                href="https://github.com/LucasMarchetti/PI-DOGS"
+                href="https://github.com/LucasMarchetti/Portfolio"
                 target="_blank"
                 style={{
                   color: "var(--primary-color)",
