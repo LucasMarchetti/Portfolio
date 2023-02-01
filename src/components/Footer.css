@@ -37,3 +37,10 @@
 .line {
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 940px) {
+  .container {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}

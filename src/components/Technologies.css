@@ -24,7 +24,7 @@
   padding: 2rem;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 450px) {
   .technologies .container {
     width: 100%;
   }
@@ -33,7 +33,7 @@
   }
 
   .technologies li {
-    padding: 0.5rem;
+    padding: 0.09rem;
   }
 
   .technologies .container ul {

@@ -16,6 +16,9 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="container">
+        <h2>Contacto</h2>
+        <span className="line"></span>
+
         <form onSubmit={handleSubmit}>
           <label>Nombre Y Apellido</label>
           <input type="text" placeholder="Juan Perez"></input>

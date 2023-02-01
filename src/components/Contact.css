@@ -26,6 +26,12 @@ form textarea {
   color: black;
 }
 
+h2 {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
 .response {
   display: flex;
   justify-content: center;
