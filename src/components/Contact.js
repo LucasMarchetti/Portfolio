@@ -34,7 +34,10 @@ export default function Contact() {
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
           <label>Asunto</label>
-          <input type="text"></input>
+          <input 
+          type="text"
+          placeholder="Escriba aqui un asunto..."
+          ></input>
 
           <label>Mensaje</label>
           <textarea

@@ -20,7 +20,7 @@ function AboutMe() {
             equipo, comunicación y autodidacta. También he trabajado con
             metodologías SCRUM y GitFlow.
           </p>
-          {/* <h3>San Fernando del Valle de Catamarca, Catamarca, Argentina</h3> */}
+          <h3>San Fernando del Valle de Catamarca, Catamarca, Argentina</h3>
           {/* <button className="button"> Mas Informacion</button> */}
         </div>
       </div>

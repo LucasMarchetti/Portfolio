@@ -3,6 +3,8 @@ import "./Proyects.css";
 import p1 from "./images/reparo.io.png";
 import p2 from "./images/2.jfif";
 import p3 from "./images/3.png";
+import p4 from "./images/4.png";
+
 
 export default function Proyects() {
   return (
@@ -27,6 +29,7 @@ export default function Proyects() {
               <a
                 href="https://github.com/Joel301/reparo_io_FrontEnd"
                 target="_blank"
+                 rel="noreferrer"
                 style={{
                   color: "var(--primary-color)",
                   fontSize: "1rem",
@@ -53,6 +56,7 @@ export default function Proyects() {
             <p>
               <a
                 href="https://github.com/LucasMarchetti/PI-DOGS"
+                 rel="noreferrer"
                 target="_blank"
                 style={{
                   color: "var(--primary-color)",
@@ -74,6 +78,33 @@ export default function Proyects() {
             <p>
               <a
                 href="https://github.com/LucasMarchetti/Portfolio"
+                 rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "var(--primary-color)",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                }}
+              >
+                Link a repositorio
+              </a>
+            </p>
+          </div>
+          <div className="card">
+            <img src={p4} alt="img1" style={{ border: "1px solid gray" }} />
+            <p>
+              Catálogo diseñado a pedido de un cliente. El mismo necesitaba una pagina básica para poder mostrar sus productos y quedó muy conforme con el resultado.
+              Pronto se le agregarán funcionalidades para mejorar la interfaz y practicidad para sus clientes.
+              Tecnologías utilizadas: JavaScript, HTML, CSS y React.
+            </p>
+            <p>
+              <span>Vera Táctico - Catálogo</span>
+            </p>
+            <p>Freelance</p>
+            <p>
+              <a
+                href="https://veratactico.netlify.app/"
+                 rel="noreferrer"
                 target="_blank"
                 style={{
                   color: "var(--primary-color)",

@@ -5,7 +5,7 @@
 }
 
 .technologies .container {
-  width: 1240px;
+  width: 100%;
   margin: 0rem auto;
   padding: 0.5rem 0rem;
 }
@@ -22,12 +22,55 @@
 
 .technologies li {
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.images {
+  width: 100px;
+}
+
+.content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 985px) {
+  .images {
+    width: 80px;
+  }
+  .technologies li {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .images {
+    width: 60px;
+  }
+  .technologies li {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .images {
+    width: 50px;
+  }
+  .technologies li {
+    padding: 0.8rem;
+  }
+}
+
 
 @media screen and (max-width: 450px) {
   .technologies .container {
     width: 100%;
   }
+  
   .technologies .container h2 {
     margin-top: 30px;
   }
