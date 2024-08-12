@@ -8,7 +8,7 @@ const Hero = () => {
         <p></p>
         <p>FULL STACK DEVELOPER</p>
         <p>Lucas Marchetti</p>
-        <p>Fronted & Backend</p>
+        <p>Frontend & Backend</p>
         <button className="button">
           <a href="#contact">Consulta aqui</a>
         </button>

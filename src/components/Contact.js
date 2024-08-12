@@ -19,6 +19,8 @@ export default function Contact() {
         <h2>Contacto</h2>
         <span className="line"></span>
 
+
+
         <form onSubmit={handleSubmit}>
           <label>Nombre Y Apellido</label>
           <input type="text" placeholder="Juan Perez"></input>
@@ -60,6 +62,44 @@ export default function Contact() {
           </button>
         </form>
       </div>
+      <div className="btns">
+          <p>
+            También puedes buscarme en 
+          </p>
+          <div className="btns-contact">
+            <button className="button" style={{backgroundColor:"#534ef3"}}>
+              <a
+                href="https://github.com/LucasMarchetti"
+                rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "white",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                  marginTop:"10px"
+                }}
+              >
+                GitHub
+              </a>
+            </button>
+            <p> ó</p>
+            <button className="button" style={{backgroundColor:"#534ef3"}}>
+              <a
+                  href="https://www.linkedin.com/in/marchetti-lucas/"
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{
+                    color: "white",
+                    fontSize: "1rem",
+                    fontWeight: "700",
+                    marginTop:"10px"
+                  }}
+                >
+                  LinkedIn
+                </a>
+            </button>
+          </div>
+        </div>
     </div>
   );
 }

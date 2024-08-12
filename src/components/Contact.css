@@ -2,6 +2,24 @@
   background-color: #f8f8f8;
 }
 
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btns-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns-contact button {
+  margin: 20px;
+}
+
 label {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
