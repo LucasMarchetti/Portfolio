@@ -1,13 +1,12 @@
 import React from "react";
 import "./AboutMe.css";
 import foto from "./images/foto.png";
-// import { CiLocationOn } from "react-icons/ci";
 
 function AboutMe() {
   return (
     <div className="about" id="about">
       <div className="container">
-        <img src={foto} alt="Foto Lucas" style={{ borderRadius: "10px" }} />
+        <img src={foto} alt="Foto Lucas" />
         <div className="col-2">
           <h2>Sobre Mi</h2>
           <span className="line"></span>
@@ -21,7 +20,6 @@ function AboutMe() {
             metodologías SCRUM y GitFlow.
           </p>
           <h3>San Fernando del Valle de Catamarca, Catamarca, Argentina</h3>
-          {/* <button className="button"> Mas Informacion</button> */}
         </div>
       </div>
     </div>

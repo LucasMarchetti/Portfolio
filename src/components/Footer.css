@@ -44,3 +44,9 @@
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-width: 470px) {
+  .container {
+    font-size: 0.6rem;
+  }
+}
