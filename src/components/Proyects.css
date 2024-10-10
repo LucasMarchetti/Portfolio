@@ -46,6 +46,11 @@
   font-weight: 700;
 }
 
+.card img {
+  width: 300px;
+  height: 200px;
+}
+
 @media screen and (max-width: 1180px) {
   .testimonials .container {
     width: 100%;

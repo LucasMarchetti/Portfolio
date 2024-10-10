@@ -4,6 +4,7 @@ import p1 from "./images/reparo.io.png";
 import p2 from "./images/2.jfif";
 import p3 from "./images/3.png";
 import p4 from "./images/4.png";
+import p5 from "./images/5.png";
 
 
 export default function Proyects() {
@@ -101,9 +102,9 @@ export default function Proyects() {
               <span>Vera Táctico - Catálogo</span>
             </p>
             <p>Freelance</p>
-            <p>
+            <p style={{display:"flex", flexDirection:"column"}}>
               <a
-                href="https://veratactico.netlify.app/"
+                href="https://github.com/LucasMarchetti/CatalogVeraTactico"
                  rel="noreferrer"
                 target="_blank"
                 style={{
@@ -113,6 +114,58 @@ export default function Proyects() {
                 }}
               >
                 Link a repositorio
+              </a>
+              <a
+                href="https://veratactico.netlify.app/"
+                 rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "var(--primary-color)",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                  marginTop:"10px"
+                }}
+              >
+                Link a web
+              </a>
+            </p>
+          </div>
+          <div className="card">
+            <img src={p5} alt="img1" style={{ border: "1px solid gray" }} />
+            <p>
+              Página web de información y contacto para la empresa Edicosa (Argentina).
+              Tecnologías utilizadas: JavaScript, HTML, CSS y React.
+            </p>
+            <p>
+              <span>Edicosa - Imprenta</span>
+            </p>
+            <p>Freelance</p>
+            <p style={{display:"flex", flexDirection:"column"}}>
+              <a
+                href="https://github.com/LucasMarchetti/edicosa-web"
+                 rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "var(--primary-color)",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                  marginTop:"5px"
+                }}
+              >
+                Link a repositorio
+              </a>
+              <a
+                href="https://edicosa.netlify.app/"
+                 rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "var(--primary-color)",
+                  fontSize: "1rem",
+                  fontWeight: "700",
+                  marginTop:"10px"
+                }}
+              >
+                Link a web
               </a>
             </p>
           </div>
