@@ -22,7 +22,7 @@ export default function Contact() {
         <span className="line"></span>
 
         <form onSubmit={handleSubmit}>
-          <label>Nombre Y Apellido</label>
+          <label>Nombre y Apellido</label>
           <input type="text" placeholder="Escriba su nombre completo..."></input>
 
           <label htmlFor="email">Email</label>
