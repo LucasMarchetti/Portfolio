@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero" id="hero">
       <div className="content">
         <p></p>
-        <p>FULL STACK DEVELOPER</p>
+        <p>FULL STACK WEB DEVELOPER</p>
         <p>Lucas Marchetti</p>
         <p>Frontend & Backend</p>
         <button className="hero-button">

@@ -10,7 +10,7 @@ export default function Contact() {
   if (state.succeeded) {
     return (
       <div className="response">
-        <p>Gracias por contactarme, te escribire pronto!</p>
+        <p>Gracias por contactarme, te escribiré pronto !</p>
       </div>
     );
   }
@@ -20,8 +20,6 @@ export default function Contact() {
       <div className="container">
         <h2>Contacto</h2>
         <span className="line"></span>
-
-
 
         <form onSubmit={handleSubmit}>
           <label>Nombre Y Apellido</label>
@@ -59,9 +57,14 @@ export default function Contact() {
             errors={state.errors}
           />
 
-          <button className="button" type="submit" disabled={state.submitting}>
-            Enviar
+          <button type="submit" disabled={state.submitting}>
+            {state.submitting ? (
+              <span className="spinner"></span>
+            ) : (
+              'Enviar'
+            )}
           </button>
+
         </form>
       </div>
       <div className="btns">

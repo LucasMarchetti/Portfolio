@@ -10,13 +10,13 @@ export default function Footer() {
             <a href="/">Inicio</a>
           </li>
           <li className="footer-nav-item">
-            <a href="#about">Sobre Mi</a>
+            <a href="#about">Mi Perfil</a>
           </li>
           <li className="footer-nav-item">
             <a href="#proyects">Proyectos</a>
           </li>
           <li className="footer-nav-item">
-            <a href="#tech">Tecnologias</a>
+            <a href="#tech">Tecnologías</a>
           </li>
           <li className="footer-nav-item">
             <a href="#contact">Contacto</a>
