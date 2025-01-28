@@ -25,7 +25,7 @@ export default function Contact() {
 
         <form onSubmit={handleSubmit}>
           <label>Nombre Y Apellido</label>
-          <input type="text" placeholder="Juan Perez"></input>
+          <input type="text" placeholder="Escriba su nombre completo..."></input>
 
           <label htmlFor="email">Email</label>
           <input
@@ -33,7 +33,7 @@ export default function Contact() {
             id="email"
             name="email"
             required
-            placeholder="juan@gmail.com"
+            placeholder="ejemplo@gmail.com"
           ></input>
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 

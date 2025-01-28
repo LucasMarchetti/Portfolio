@@ -8,7 +8,7 @@ function AboutMe() {
       <div className="container">
         <img src={foto} alt="Foto Lucas" />
         <div className="col-2">
-          <h2>Sobre Mi</h2>
+          <h2>Mi Perfil</h2>
           <span className="line"></span>
           <p>
             Mi formación en la Tecnicatura en Diseño de Software en la Universidad Nacional de Catamarca, junto con la especialización en Full Stack Web Development de SoyHenry, respalda mi enfoque práctico y teórico en el desarrollo de tecnologías web modernas.

@@ -9,8 +9,8 @@ const Hero = () => {
         <p>FULL STACK DEVELOPER</p>
         <p>Lucas Marchetti</p>
         <p>Frontend & Backend</p>
-        <button className="button">
-          <a href="#contact">Consulta aqui</a>
+        <button className="hero-button">
+          <a href="#contact" className="hero-button-link">Contáctame</a>
         </button>
       </div>
     </div>

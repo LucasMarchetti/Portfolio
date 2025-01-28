@@ -1,52 +1,94 @@
-.footer {
+/* Estilos base */
+.footer-section {
   width: 100%;
   background-color: #000;
   color: #eee;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
-.footer .container {
+.footer-container {
   max-width: 1240px;
   margin: auto;
   text-align: center;
 }
 
-.footer ul {
+.footer-nav {
   display: flex;
   justify-content: center;
 }
 
-.footer li {
+.footer-nav-item {
   padding: 1rem;
 }
 
-.footer li a {
+.footer-nav-item a {
   color: #fff;
+  text-decoration: none;
 }
 
-.footer li a:hover {
+.footer-nav-item a:hover {
   padding-bottom: 12px;
   border-bottom: 3px solid var(--secondary-color);
 }
 
-.bottom {
+.footer-bottom {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
-.line {
-  margin-bottom: 1rem;
+.footer-line {
+  margin-bottom: 2.5rem;
+  /* margin-top: 1rem; */
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #555;
 }
 
+/* Estilos para el enlace LM */
+.footer-logo-link {
+  font-family: "Krona One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #eee;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-logo-link:hover {
+  color: #f3bf12;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Subrayado animado */
+.footer-logo-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f3bf12;
+  transition: width 0.3s ease-in-out;
+}
+
+.footer-logo-link:hover::after {
+  width: 100%;
+}
+
+
+/* Estilos responsivos */
 @media screen and (max-width: 940px) {
-  .container {
+  .footer-container {
     width: 100%;
     font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 470px) {
-  .container {
+  .footer-container {
     font-size: 0.6rem;
   }
 }

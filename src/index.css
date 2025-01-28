@@ -12,6 +12,36 @@
   padding: 0;
 }
 
+/* Aplica el estilo de barra a todo el sitio */
+::-webkit-scrollbar {
+  width: 16px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color de fondo del track */
+  border-radius: 10px; /* Bordes redondeados del track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #000000, #4d4d4d); /* Degradado en la barra */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #014288, #0082b3); /* Color al pasar el cursor */
+}
+
+/* Opcional: Aplica un estilo a las barras en el eje horizontal */
+::-webkit-scrollbar:horizontal {
+  height: 10px; /* Altura de la barra horizontal */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(45deg, #007bff, #00d4ff); /* Degradado horizontal */
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

@@ -3,28 +3,39 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className="footer">
-      <div className="container">
-        <ul>
-          <li className="nav-item">
-            <a href="/">Home</a>
+    <div className="footer-section">
+      <div className="footer-container">
+        <ul className="footer-nav">
+          <li className="footer-nav-item">
+            <a href="/">Inicio</a>
           </li>
-          <li className="nav-item">
+          <li className="footer-nav-item">
             <a href="#about">Sobre Mi</a>
           </li>
-          <li className="nav-item">
+          <li className="footer-nav-item">
             <a href="#proyects">Proyectos</a>
           </li>
-          <li className="nav-item">
+          <li className="footer-nav-item">
             <a href="#tech">Tecnologias</a>
           </li>
-          <li className="nav-item">
+          <li className="footer-nav-item">
             <a href="#contact">Contacto</a>
           </li>
         </ul>
-        <div className="bottom">
-          <span className="line"></span>
-          <p>2023 Execute by LM. All rights reserved. </p>
+        <div className="footer-bottom">
+          <span className="footer-line"></span>
+          <p>
+            2023 Designed & Developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/marchetti-lucas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-logo-link"
+            >
+              LM
+            </a>
+            . All rights reserved.
+          </p>
         </div>
       </div>
     </div>

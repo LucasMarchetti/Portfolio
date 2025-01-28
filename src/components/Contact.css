@@ -1,5 +1,10 @@
 .contact {
   background-color: #f8f8f8;
+  font-family: sans-serif;
+}
+
+form textarea {
+  font-family: sans-serif;
 }
 
 .btns {
