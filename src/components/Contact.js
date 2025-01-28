@@ -1,6 +1,8 @@
 import React from "react";
 import "./Contact.css";
 import { useForm, ValidationError } from "@formspree/react";
+import LinkedinImage from "../components/images/linkedin.png"
+import GitHubImage from "../components/images/github.png"
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xbjedzlw");
@@ -64,40 +66,42 @@ export default function Contact() {
       </div>
       <div className="btns">
           <p>
-            También puedes buscarme en 
+            También puedes encontrarme en :
           </p>
           <div className="btns-contact">
-            <button className="button" style={{backgroundColor:"#534ef3"}}>
-              <a
-                href="https://github.com/LucasMarchetti"
-                rel="noreferrer"
-                target="_blank"
-                style={{
-                  color: "white",
-                  fontSize: "1rem",
-                  fontWeight: "700",
-                  marginTop:"10px"
-                }}
-              >
-                GitHub
-              </a>
-            </button>
-            <p> ó</p>
-            <button className="button" style={{backgroundColor:"#534ef3"}}>
-              <a
-                  href="https://www.linkedin.com/in/marchetti-lucas/"
+            <ul class="wrapper">
+
+              <li className="icon twitter">
+                <span className="tooltip">GitHub</span>
+                <a 
+                  href="https://github.com/LucasMarchetti" 
+                  target="_blank" 
                   rel="noreferrer"
-                  target="_blank"
-                  style={{
-                    color: "white",
-                    fontSize: "1rem",
-                    fontWeight: "700",
-                    marginTop:"10px"
-                  }}
                 >
-                  LinkedIn
+                  <img 
+                    src={GitHubImage} 
+                    alt="GitHub-Image" 
+                    className="icon-red-social" 
+                  />
                 </a>
-            </button>
+              </li>
+
+              <li className="icon twitter">
+                <span className="tooltip">LinkedIn</span>
+                <a 
+                  href="https://www.linkedin.com/in/marchetti-lucas/" 
+                  target="_blank" 
+                  rel="noreferrer"
+                >
+                  <img 
+                    src={LinkedinImage} 
+                    alt="LinkedIn-Image" 
+                    className="icon-red-social" 
+                  />
+                </a>
+              </li>
+
+            </ul>
           </div>
         </div>
     </div>

@@ -11,13 +11,10 @@ function AboutMe() {
           <h2>Sobre Mi</h2>
           <span className="line"></span>
           <p>
-            Desarrollador Web Full Stack. Con experiencia trabajando con NodeJS,
-            React, Redux, SQL, entre otras tecnologías del sector.
+            Mi formación en la Tecnicatura en Diseño de Software en la Universidad Nacional de Catamarca, junto con la especialización en Full Stack Web Development de SoyHenry, respalda mi enfoque práctico y teórico en el desarrollo de tecnologías web modernas.
           </p>
           <p>
-            Con pensamiento creativo, resolución de problemas, trabajo en
-            equipo, comunicación y autodidacta. También he trabajado con
-            metodologías SCRUM y GitFlow.
+            Con pensamiento creativo, resolución de problemas, trabajo en equipo y buena comunicación. También trabajo con metodologías SCRUM y GitFlow.
           </p>
           <h3>San Fernando del Valle de Catamarca, Catamarca, Argentina</h3>
         </div>
