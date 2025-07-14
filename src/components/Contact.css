@@ -54,10 +54,10 @@ form textarea::placeholder {
 
 form button {
   padding: 12px 24px;
-  background-color: #005f73;
+  background-color: var(--primary-dark);
   color: #fff;
   font-size: 1.1rem;
-  border: 2px solid #005f73;
+  border: 2px solid var(--primary-dark);
   border-radius: 50px; /* Borde más redondeado */
   cursor: pointer;
   transition: all 0.3s ease; /* Transición más suave */
@@ -73,8 +73,8 @@ form button:disabled {
 }
 
 form button:hover {
-  background-color: #0a4f52;
-  border-color: #0a4f52;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   transform: translateY(-2px); /* Efecto de elevación */
 }
 

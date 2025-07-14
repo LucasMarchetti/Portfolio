@@ -5,6 +5,7 @@ import p2 from "./images/2.jfif";
 import p3 from "./images/3.png";
 import p4 from "./images/4.png";
 import p5 from "./images/5.png";
+import p6 from "./images/6.png";
 
 export default function Proyects() {
   return (
@@ -106,7 +107,7 @@ export default function Proyects() {
                 target="_blank"
                 className="link"
               >
-                Link a web
+                Link a sitio web
               </a>
             </p>
           </div>
@@ -135,7 +136,27 @@ export default function Proyects() {
                 target="_blank"
                 className="link"
               >
-                Link a web
+                Link a sitio web
+              </a>
+            </p>
+          </div>
+          <div className="card">
+            <img src={p6} alt="Reparo.io" />
+            <p>
+              Sistema de gestión de torneos destinado a las federaciones de voleibol del NOA Argentino, que incluye las federaciones de Catamarca, La Rioja, Jujuy, Santiago del Estero, Salta y Tucumán. El sistema facilita la organización y administración de torneos, clubes, divisiones, estadios y partidos, además de gestionar usuarios y administradores para las seis federaciones participantes.
+            </p>
+            <p>
+              <span>Sistema de Programación de Partidos para la Liga Regional de Voleibol del NOA Argentino</span>
+            </p>
+            <p>Quoveryn</p>
+            <p>
+              <a
+                href="https://federaciones-noa-production.up.railway.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
+                Link a sitio web
               </a>
             </p>
           </div>
