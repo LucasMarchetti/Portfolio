@@ -1,78 +1,168 @@
-
-.technologies {
+.tech {
   width: 100%;
-  background-color: #eee;
-  margin-top: -70px;
-  padding: 20px 0;
+  padding: 7rem 1.5rem;
+  background: var(--bg);
 }
 
-.technologies h2 {
-  font-size: 3rem;
+.tech-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.tech-container.tech-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+.tech-header {
   text-align: center;
+  margin-bottom: 3.5rem;
 }
 
-.technologies .grid {
-  margin-top: 80px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
+/* ── Category sections ──────────────────────────────── */
 
-.card2 {
+.tech-categories {
   display: flex;
   flex-direction: column;
+  gap: 2.5rem;
+}
+
+.tech-cat {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.tech-visible .tech-cat {
+  animation: fadeInUp 0.6s ease both;
+  animation-delay: var(--cat-delay, 0s);
+}
+
+.tech-cat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tech-cat-label::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: var(--indigo);
+  border-radius: 1px;
+}
+
+/* ── Tech grid ──────────────────────────────────────── */
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ── Tech card ──────────────────────────────────────── */
+
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.1rem 0.6rem 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  cursor: default;
+  transition: all var(--t);
+
+  opacity: 0;
+}
+
+.tech-visible .tech-card {
+  animation: fadeInUp 0.5s ease both;
+  animation-delay: var(--item-delay, 0s);
+}
+
+.tech-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(99, 102, 241, 0.1);
+}
+
+/* Icon wrapper */
+.tech-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.3s ease, rotate 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.card2:hover {
-  transform: scale(1.1) rotate(5deg);
+.tech-icon-wrap img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+  transition: transform var(--t);
 }
 
-.images2 {
-  width: 100px;
-  border-radius: 5px;
-  transition: transform 0.3s ease;
+.tech-card:hover .tech-icon-wrap img {
+  transform: scale(1.1);
 }
 
-.card2:hover .images2 {
-  transform: scale(1.2);
+/* Name */
+.tech-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color var(--t);
 }
 
-.card2 p {
-  margin-top: 20px;
-  font-weight: 500;
+.tech-card:hover .tech-name {
+  color: var(--text);
 }
 
-/* Responsive Grid */
-@media (max-width: 1000px) {
-  .technologies .grid {
-    grid-template-columns: repeat(3, 1fr);
+/* ── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .tech {
+    padding: 5rem 1.25rem;
   }
-}
 
-@media (max-width: 768px) {
-  .images2 {
-    width: 80px;
+  .tech-grid {
+    gap: 0.55rem;
   }
-}
 
-@media (max-width: 600px) {
-  .technologies .grid {
-    margin-left: 10px;
-    margin-right: 10px;
+  .tech-card {
+    padding: 0.5rem 0.85rem 0.5rem 0.55rem;
   }
-}
 
-@media (max-width: 480px) {
-  .images2 {
-    width: 60px;
+  .tech-icon-wrap {
+    width: 26px;
+    height: 26px;
+  }
+
+  .tech-icon-wrap img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tech-name {
+    font-size: 0.8rem;
   }
 }

@@ -1,112 +1,218 @@
 .about {
-  background-color: #f8f8f8;
-  margin: auto;
-  padding: 5rem 1rem 5rem 1rem;
   width: 100%;
+  padding: 7rem 1.5rem;
+  background: var(--bg-2);
+  position: relative;
 }
 
-.about .container {
-  width: 100%;
-  margin: auto;
+.about-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.about-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Card ───────────────────────────────────────────── */
+
+.about-card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.5fr);
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem;
+  border-radius: var(--r-xl);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
 }
 
-.about .container img {
-  margin-left: 180px;
-  border-radius: 50px;
-  max-width: 500px;
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.about h2 {
-  font-size: 3rem;
+/* ── Image ──────────────────────────────────────────── */
+
+.about-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about h3 {
-  margin-top: 3rem;
-  color: var(--primary-dark);
-  font-style: italic;
+.about-image-ring {
+  position: relative;
+  padding: 3px;
+  border-radius: 999px;
+  background: conic-gradient(
+    from 120deg,
+    rgba(99, 102, 241, 0.9),
+    rgba(139, 92, 246, 0.6),
+    rgba(34, 211, 238, 0.7),
+    rgba(99, 102, 241, 0.9)
+  );
 }
 
-.about .col-2 {
+.about-image-ring img {
+  width: 230px;
+  height: 230px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: var(--bg-2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+  display: block;
+}
+
+.about-visible .about-image-ring:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Text ───────────────────────────────────────────── */
+
+.about-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  font-size: 26px;
-  padding: 3rem;
-  padding-left: 0;
+  align-items: flex-start;
+  gap: 0;
 }
 
-.about .col-2 p:first-of-type {
-  margin: 2rem 0;
+.about-text h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin-bottom: 0.3rem;
 }
 
-.about .col-2 p:nth-child(4) {
-  font-size: 1.8rem;
-  font-style: italic;
+.about-divider {
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--grad-accent);
+  margin-bottom: 1.25rem;
+}
+
+.about-intro {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  margin-bottom: 0.75rem;
+}
+
+.about-text strong {
+  color: var(--text);
   font-weight: 600;
 }
 
-.about button {
+/* Tags */
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1530px) {
-  .about .col-2 {
-    font-size: 20px;
-    padding-left: 2em;
-  }
+.about-tags span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: var(--indigo-light);
 }
 
-@media screen and (max-width: 1030px) {
-  .about .container {
+.about-location {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-3);
+  margin-top: 0.25rem;
+}
+
+/* ── Cascade animations ─────────────────────────────── */
+
+.about-visible .about-text h2,
+.about-visible .about-text .about-divider,
+.about-visible .about-text p,
+.about-visible .about-text .about-tags,
+.about-visible .about-text .about-location {
+  animation: fadeInUp 0.6s ease both;
+}
+
+.about-visible .about-text h2            { animation-delay: 0.05s; }
+.about-visible .about-text .about-divider{ animation-delay: 0.12s; }
+.about-visible .about-text .about-intro  { animation-delay: 0.2s;  }
+.about-visible .about-text p:nth-of-type(2) { animation-delay: 0.28s; }
+.about-visible .about-text p:nth-of-type(3) { animation-delay: 0.36s; }
+.about-visible .about-text .about-tags   { animation-delay: 0.44s; }
+.about-visible .about-text .about-location { animation-delay: 0.52s; }
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .about-card {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
   }
 
-  .about .container {
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
+  .about-text {
     align-items: center;
+    text-align: center;
+  }
+
+  .about-tags {
     justify-content: center;
   }
 
-  .about .container img {
-    /* margin: 2rem; */
-    width: 100%;
-    margin-top: -120px;
-    margin-bottom: -40px;
-    margin-left: 0;
-  }
-
-  .about .container .col-2 {
-    padding: 0;
-    margin-top: 40px;
-  }
-
-  .about h2 {
-    margin-top: 40px;
-  }
-
-  .about button {
-    margin-top: 3rem;
+  .about-divider {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media screen and (max-width: 400px) {
-
-  .about .container {
-    margin-top: 10px;
+@media (max-width: 640px) {
+  .about {
+    padding: 5rem 1.25rem;
   }
 
-  .about .container img {
-    margin: 0;
+  .about-card {
+    padding: 2rem 1.4rem;
   }
 
+  .about-image-ring img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .about-text h2 {
+    font-size: 1.9rem;
+  }
 }

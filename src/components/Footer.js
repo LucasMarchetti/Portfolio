@@ -1,43 +1,66 @@
 import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Footer.css";
+
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "#about", label: "Mi Perfil" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#proyects", label: "Proyectos" },
+  { href: "#tech", label: "Tecnologías" },
+  { href: "#contact", label: "Contacto" },
+];
 
 export default function Footer() {
   return (
-    <div className="footer-section">
+    <footer className="footer">
       <div className="footer-container">
-        <ul className="footer-nav">
-          <li className="footer-nav-item">
-            <a href="/">Inicio</a>
-          </li>
-          <li className="footer-nav-item">
-            <a href="#about">Mi Perfil</a>
-          </li>
-          <li className="footer-nav-item">
-            <a href="#proyects">Proyectos</a>
-          </li>
-          <li className="footer-nav-item">
-            <a href="#tech">Tecnologías</a>
-          </li>
-          <li className="footer-nav-item">
-            <a href="#contact">Contacto</a>
-          </li>
-        </ul>
-        <div className="footer-bottom">
-          <span className="footer-line"></span>
-          <p>
-            2023 Designed & Developed by{" "}
+        <div className="footer-top">
+          <a href="/" className="footer-logo">LM</a>
+          <nav className="footer-nav" aria-label="Footer navigation">
+            <ul>
+              {navLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <a href={href} className="footer-link">{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="footer-social">
+            <a
+              href="https://github.com/LucasMarchetti"
+              target="_blank"
+              rel="noreferrer"
+              className="footer-icon"
+              aria-label="GitHub"
+            >
+              <FaGithub size={17} />
+            </a>
             <a
               href="https://www.linkedin.com/in/marchetti-lucas/"
               target="_blank"
-              rel="noopener noreferrer"
-              className="footer-logo-link"
+              rel="noreferrer"
+              className="footer-icon"
+              aria-label="LinkedIn"
             >
-              LM
+              <FaLinkedin size={17} />
             </a>
-            . All rights reserved.
+          </div>
+        </div>
+
+        <div className="footer-divider" />
+
+        <div className="footer-bottom">
+          <p className="footer-copy">
+            © {new Date().getFullYear()} Lucas Marchetti. Todos los derechos reservados.
+          </p>
+          <p className="footer-made">
+            Diseñado y desarrollado con
+            <span aria-hidden="true"> ♥ </span>
+            en Argentina
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
