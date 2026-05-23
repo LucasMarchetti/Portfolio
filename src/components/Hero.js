@@ -11,13 +11,14 @@ export default function Hero() {
       <div className="hero-grid" aria-hidden="true" />
 
       <div className="hero-inner">
-        <div className="hero-badge">
+        {/* <div className="hero-badge">
           <span className="badge-dot" aria-hidden="true" />
           Disponible para trabajar
-        </div>
+        </div> */}
 
         <h1 className="hero-title">
-          Lucas<br />
+          Lucas
+          <br />
           <span className="hero-gradient">Marchetti.</span>
         </h1>
 
@@ -25,8 +26,8 @@ export default function Hero() {
 
         <p className="hero-desc">
           Especializado en <strong>React</strong>, <strong>Node.js</strong> y{" "}
-          <strong>PostgreSQL</strong>. Construyo productos escalables
-          y experiencias digitales que generan impacto real.
+          <strong>PostgreSQL</strong>. Construyo productos escalables y
+          experiencias digitales que generan impacto real.
         </p>
 
         <div className="hero-actions">
@@ -61,13 +62,19 @@ export default function Hero() {
           <div className="hero-stack">
             <span className="stack-label">Stack</span>
             {stack.map((t) => (
-              <span key={t} className="stack-pill">{t}</span>
+              <span key={t} className="stack-pill">
+                {t}
+              </span>
             ))}
           </div>
         </div>
       </div>
 
-      <a href="#about" className="hero-scroll" aria-label="Ir a la siguiente sección">
+      <a
+        href="#about"
+        className="hero-scroll"
+        aria-label="Ir a la siguiente sección"
+      >
         <span className="hero-scroll-text">Scroll</span>
         <span className="hero-scroll-line" aria-hidden="true" />
       </a>
